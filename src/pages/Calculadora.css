@@ -2,9 +2,33 @@
   font-family: "Poppins", sans-serif;
 }
 
+.section-calculator {
+  display: flex;
+  justify-content: center;
+}
+
+.title-container{
+  margin: 1rem;
+  
+  color: #EBEBEC;
+  width: 30rem;
+  display: flex;
+    padding: 18.3125rem 5.33275rem 5.625rem 4.99325rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 2.64638rem;
+
+    background: #F15A24;
+}
+
+.title-container h1 {
+  font-weight: 600;
+}
+
 .calculadora-container {
-  width: 900px;
-  margin: 5rem auto;
+  width: 90rem;
+  margin: 1rem ;
   padding: 20px;
   background-color: #f2f2f2;
   animation: slide-up 0.3s ease-in-out;
@@ -208,3 +232,4 @@
 .input-icon-clickable {
   cursor: pointer;
 }
+

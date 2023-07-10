@@ -76,74 +76,89 @@ const Calculadora = () => {
   return (
     <div>
       <HeaderShare />
-      <div className="calculadora-container">
-        <div className="titlesec">
-          <h1>Informe seus Dados</h1>
-          <p className="color-gray">Preenchimento Obrigatório*</p>
-        </div>
-          
-        <div className="input-container">
-          <div className="input-icon input-icon-left">
-            <img src="/realmoeda.svg" alt="Ícone Moeda R$ Real" />
+      
+      <div className="section-calculator">
+      <div className="title-container">
+          <div>
+            <img src="iconcalculatortitle.svg" alt="" />
+            <h1>Descubra o Alcance, o CAC, ROI e o ROAS ideais de suas mídias para ter um funil de vendas eficiente.</h1>
           </div>
-          <input
-            type="number"
-            name="ticketMedio"
-            value={ticketMedio}
-            onChange={handleInputChange}
-            placeholder="Ticket Médio"
-          />
+            
+  
         </div>
 
 
-        <div className="input-container">
-          <input
-            type="number"
-            name="metaFaturamento"
-            value={metaFaturamento}
-            onChange={handleInputChange}
-            onFocus={handleInputFocus}
-            onBlur={handleInputBlur}
-            placeholder="Meta de Faturamento Mensal"
-          />
+
+        <div className="calculadora-container">
+          <div className="titlesec">
+            <h1>Informe seus Dados</h1>
+            <p className="color-gray">Preenchimento Obrigatório*</p>
+          </div>
+            
+          <div className="input-container">
+            <div className="input-icon input-icon-left">
+              <img src="/realmoeda.svg" alt="Ícone Moeda R$ Real" />
+            </div>
+            <input
+              type="number"
+              name="ticketMedio"
+              value={ticketMedio}
+              onChange={handleInputChange}
+              placeholder="Ticket Médio"
+            />
+          </div>
+
+
+          <div className="input-container">
+            <input
+              type="number"
+              name="metaFaturamento"
+              value={metaFaturamento}
+              onChange={handleInputChange}
+              onFocus={handleInputFocus}
+              onBlur={handleInputBlur}
+              placeholder="Meta de Faturamento Mensal"
+            />
+          </div>
+          <div className="input-container">
+            <input
+              type="number"
+              name="investimentoComunicacao"
+              value={investimentoComunicacao}
+              onChange={handleInputChange}
+              onFocus={handleInputFocus}
+              onBlur={handleInputBlur}
+              placeholder="Investimentos em Comunicação"
+            />
+          </div>
+          <div className="input-container">
+            <input
+              type="number"
+              name="investimentoMidiaPaga"
+              value={investimentoMidiaPaga}
+              onChange={handleInputChange}
+              onFocus={handleInputFocus}
+              onBlur={handleInputBlur}
+              placeholder="Investimentos em Mídia Paga"
+            />
+          </div>
+          <button className="calcular-btn" onClick={calcularROI}>
+            Calcular ROI
+          </button>
+          <button className="calcular-btn" onClick={calcularROAS}>
+            Calcular ROAS
+          </button>
+          {roi && <p className="resultado-text">ROI: {roi}%</p>}
+          {roas && <p className="resultado-text">ROAS: {roas}%</p>}
+          {porcentagemConsideramComprar && (
+            <p>Porcentagem de usuários que consideram comprar: {porcentagemConsideramComprar}%</p>
+          )}
+          {porcentagemCompram && (
+            <p>Porcentagem de usuários que compram: {porcentagemCompram}%</p>
+          )}
         </div>
-        <div className="input-container">
-          <input
-            type="number"
-            name="investimentoComunicacao"
-            value={investimentoComunicacao}
-            onChange={handleInputChange}
-            onFocus={handleInputFocus}
-            onBlur={handleInputBlur}
-            placeholder="Investimentos em Comunicação"
-          />
-        </div>
-        <div className="input-container">
-          <input
-            type="number"
-            name="investimentoMidiaPaga"
-            value={investimentoMidiaPaga}
-            onChange={handleInputChange}
-            onFocus={handleInputFocus}
-            onBlur={handleInputBlur}
-            placeholder="Investimentos em Mídia Paga"
-          />
-        </div>
-        <button className="calcular-btn" onClick={calcularROI}>
-          Calcular ROI
-        </button>
-        <button className="calcular-btn" onClick={calcularROAS}>
-          Calcular ROAS
-        </button>
-        {roi && <p className="resultado-text">ROI: {roi}%</p>}
-        {roas && <p className="resultado-text">ROAS: {roas}%</p>}
-        {porcentagemConsideramComprar && (
-          <p>Porcentagem de usuários que consideram comprar: {porcentagemConsideramComprar}%</p>
-        )}
-        {porcentagemCompram && (
-          <p>Porcentagem de usuários que compram: {porcentagemCompram}%</p>
-        )}
       </div>
+
       <FooterShare />
     </div>
   );
