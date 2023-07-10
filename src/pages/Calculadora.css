@@ -1,0 +1,210 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.calculadora-container {
+  width: 900px;
+  margin: 5rem auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  animation: slide-up 0.3s ease-in-out;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.calculadora-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.calculadora-container div {
+  margin-bottom: 10px;
+}
+
+.calculadora-container label {
+  font-weight: bold;
+}
+
+.calculadora-container input[type="number"] {
+  width: 30rem;
+  height: 3rem;
+  background-color: #F15A24;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: .8rem;
+  border: none;
+  position: relative;
+}
+
+.calculadora-container label {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  color: #fff;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.calculadora-container input[type="number"]:focus + label,
+.calculadora-container input[type="number"]:not(:placeholder-shown) + label {
+  transform: translateY(-2rem);
+  font-size: 0.8rem;
+}
+
+.calcular-btn {
+  font-weight: bold;
+  font-size: 1.4rem;
+
+  margin-right: 2rem;
+  width: 20rem;
+  height: 8rem;
+
+  background-color: #39B54A;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: .8rem;
+  border: none;
+  cursor: pointer;
+}
+
+.calcular-btn:hover {
+  background-color: #32A041;
+}
+
+.resultado-text {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+.calculadora-container p {
+  margin-top: 1rem;
+}
+
+.resultado-text {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+
+
+.clickable {
+  cursor: pointer;
+}
+
+::placeholder {
+  color: white;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: .1rem;
+}
+
+.titlesec {
+  margin: 0;
+  color: #F15A24;
+}
+
+.titlesec p {
+  margin-top: -1rem;
+  color: #9A9A9B;
+}
+
+
+.input-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.input-container input[type="number"] {
+  width: 30rem;
+  height: 3rem;
+  padding-left: 2.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  background-color: #f15a24;
+  color: white;
+}
+
+.input-container input[type="number"] + label {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.input-container label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  pointer-events: none;
+  transition: color 0.3s;
+}
+
+.input-container input[type="number"]:focus + label {
+  opacity: 1;
+}
+
+.input-container input[type="number"]:focus + label,
+.input-container input[type="number"]:not(:placeholder-shown) + label {
+  font-weight: 700;
+}
+
+.input-container input[type="number"]:not(:placeholder-shown) + label {
+  transform: translate(0, -120%) scale(0.8);
+  opacity: 1;
+  font-weight: 700;
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label {
+  margin-top: 0.3rem;
+  transform: translateY(0);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.input-container input-label-focused {
+  top: 0;
+  opacity: 0;
+  transform: translateY(0);
+  font-size: 0.8rem;
+  color: rgb(255, 255, 255);
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.input-icon img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.input-icon-clickable {
+  cursor: pointer;
+}

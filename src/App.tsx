@@ -1,5 +1,5 @@
 import { Routes, Route, useNavigationType, useLocation } from "react-router-dom";
-import Calculadora from "./pages/Caculadora";
+import Calculadora from "./pages/Calculadora";
 import FooterShare from "./components/FooterShare";
 import HeaderShare from "./components/HeaderShare";
 import Index from "./pages/Index";
